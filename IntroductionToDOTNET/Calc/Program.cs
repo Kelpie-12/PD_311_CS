@@ -37,16 +37,16 @@ namespace Calc
 			} 
 #endif
 			bool correct = true;
-			do
-			{
+			//do
+			//{
 				//Console.Write("Введите арифметические выражение: ");
 				//string expression = Console.ReadLine();
 				//string expression = "22 * 33 / 44 * 55 / 5";				
 				expression = "(22 + 33 * (44 + 55 ))/ 5";
 
 				Console.WriteLine("Result: " + Browse(expression));
-
-			} while (!correct);
+				Console.WriteLine("Result: " + Calculate(expression));
+			//} while (!correct);
 
 
 			//Main(args);	//Рекурсивный вызов функции Main(), при завершении программы она заново звпускается.
@@ -90,7 +90,7 @@ namespace Calc
 						Program.expression = expression.Replace($"({s_subexpr})", result.ToString());
 						
 					}
-					Browse(Program.expression);
+					//Browse(Program.expression);
 				}
 			}
 			return expression;
